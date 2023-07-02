@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      :root {
+        --color-black: #003;
+        --color-white: #f9fafb;
+        --color-gray: #ccc;
+        --color-light-teal: #daeeed;
+        --color-teal: #6dbeb7;
+        --color-dark-teal: #0d9488;
+        --color-dark-pink: #b4555e;
+      }
+      .option-container {
+        margin: 1rem;
+      }
+      .option-container * + * {
+        margin: 1.5rem 0 0;
+      }
+      h1 {
+        color: var(--color-black);
+      }
+      label {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 500;
+      }
+      textarea {
+        display: block;
+        width: 90%;
+        margin-top: 0.25rem;
+        padding: 0.625rem;
+        background-color: var(--color-white);
+        border: 2px solid var(--color-gray);
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+      button {
+        padding: 0.625rem 1.25rem;
+        margin: 0 0.75rem 0.25rem 0;
+        color: var(--color-white);
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 500;
+        background-color: var(--color-dark-teal);
+        border: 0;
+        border-radius: 0.5rem;
+      }
+      button:hover {
+        background-color: var(--color-dark-teal);
+        filter: brightness(1.2);
+      }
+      .button-wrapper {
+        display: flex;
+        align-items: center;
+      }
+      .message {
+        margin-top: 0;
+        font-weight: 800;
+      }
+      .message--success {
+        color: var(--color-dark-teal);
+      }
+      .message--failure {
+        color: var(--color-dark-pink);
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="option-container">
+      <div>
+        <label for="url">Configuration</label>
+        <textarea
+          id="config"
+          name="config"
+          class="js-config"
+          rows="10"
+          cols="50"
+        ></textarea>
+        <div class="button-wrapper">
+          <button class="js-save">Save</button>
+          <div class="js-message message hidden"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="/src/options/index.ts"></script>
+</html>
