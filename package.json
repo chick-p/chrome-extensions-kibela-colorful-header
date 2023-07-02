@@ -6,7 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "run-p lint:*",
+    "lint:prettier": "prettier --check .",
+    "lint:eslint": "eslint src/**/*.ts",
+    "fix": "run-s fix:*",
+    "fix:prettier": "prettier -w .",
+    "fix:eslint": "npm run lint:eslint --fix"
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.0.0-beta.17",
