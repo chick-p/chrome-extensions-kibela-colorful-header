@@ -20,7 +20,7 @@ type Config = {
       const configStr: string = await restoreConfig();
       const config: Array<Config> = JSON.parse(configStr);
       const c = config.find((c: Config) =>
-        window.location.origin.startsWith(c.baseUrl)
+        window.location.origin.startsWith(c.baseUrl),
       );
       if (c) {
         header.style.backgroundColor = c.color;
