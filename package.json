@@ -15,7 +15,7 @@
     "fix:eslint": "npm run lint:eslint --fix"
   },
   "devDependencies": {
-    "@crxjs/vite-plugin": "^2.0.0-beta.18",
+    "@crxjs/vite-plugin": "^2.0.0-beta.19",
     "@types/chrome": "^0.0.246",
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "eslint": "^8.50.0",
