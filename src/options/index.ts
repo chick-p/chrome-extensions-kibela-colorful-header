@@ -32,7 +32,7 @@ const load = () => {
         messageElement.classList.remove("hidden");
         configElement.value = config;
       });
-    } catch (err) {
+    } catch {
       messageElement.textContent = "Fail to save!";
       messageElement.classList.remove("message--success");
       messageElement.classList.add("message--failure");
