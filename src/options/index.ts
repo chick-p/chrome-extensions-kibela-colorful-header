@@ -10,8 +10,9 @@ const load = () => {
     document.querySelector(".js-config")
   );
   chrome.storage.local.get("config").then(({ config }) => {
-    if (config) {
-      configElement.value = config;
+    const value = typeof config === "string" ? config : undefined;
+    if (value) {
+      configElement.value = value;
     }
   });
   if (!configElement.value) {

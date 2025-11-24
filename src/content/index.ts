@@ -8,8 +8,9 @@ type Config = {
     return new Promise<string>((resolve) => {
       chrome.storage.local.get(key, (items) => {
         const config = items[key];
-        if (config) {
-          resolve(items[key]);
+        const value = typeof config === "string" ? config : undefined;
+        if (value) {
+          resolve(value);
         }
       });
     });
