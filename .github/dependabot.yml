@@ -15,7 +15,9 @@ updates:
     groups:
       linter:
         patterns:
+          - "@eslint/*"
           - "eslint"
           - "prettier"
           - "eslint-config-*"
           - "eslint-plugin-*"
+          - "typescript-eslint"
